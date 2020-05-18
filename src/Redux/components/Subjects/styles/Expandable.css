@@ -1,0 +1,78 @@
+.Expandable-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.Expandable-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Expandable-Header:hover {
+  cursor: pointer;
+}
+
+.Expandable-Header:hover .Expandable-Arrow {
+  color: #61dafb;
+}
+
+.Expandable-TextAndButton {
+  display: flex;
+  align-items: baseline;
+}
+
+.Expandable-Text {
+  margin: 0;
+  margin-right: 12px;
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+
+.Expandable-DeleteButton {
+  color: red;
+  background: none;
+  border: none;
+  padding: 4px 6px;
+}
+
+.Expandable-DeleteButton:hover {
+  cursor: pointer;
+}
+
+.Expandable-DeleteButton:focus {
+  outline: none;
+}
+
+.Expandable-Arrow {
+  font-size: 20px;
+}
+
+.Expandable-Body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Expandable-BodyText {
+  margin: 6px 0;
+  display: flex;
+}
+
+.Expandable-BodyText:first-of-type {
+  margin-top: 18px;
+}
+
+.Expandable-BodyText p {
+  margin: 0;
+}
+
+.Expandable-BodyData {
+  margin: 0 0 0 16px !important;
+  font-weight: 600;
+  color: #eeeeee;
+}

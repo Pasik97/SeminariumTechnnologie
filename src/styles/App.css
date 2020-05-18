@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #1e2127;
+  border-bottom: 2px solid #0e1013;
+}
+
+.App-header-tab {
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 600;
+  color: white;
+}
+
+.App-header-tab:hover {
+  color: #61dafb;
+  cursor: pointer;
+}
+
+.App-article {
+  background-color: #282c34;
+  min-height: calc(100vh - 82px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.App-WelcomePage {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  margin-top: -20px;
+}

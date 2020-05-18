@@ -1,0 +1,60 @@
+.AddNewSubject-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.AddNewSubject-Text {
+  font-size: 18px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.AddNewSubject-InputWrapper {
+  margin: 4px 0;
+  display: flex;
+  min-width: 350px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AddNewSubject-Label {
+  margin-right: 24px;
+  font-size: 16px;
+}
+
+.AddNewSubject-Input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #61dafb;
+  padding: 6px 4px;
+  font-size: 14px;
+  color: white;
+}
+
+.AddNewSubject-Input:focus {
+  outline: none;
+  border-bottom: 1px solid #489eb6;
+}
+
+.AddNewSubject-Button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-self: center;
+  height: 36px;
+  width: 120px;
+  background: none;
+  color: white;
+  font-weight: 600;
+  border: none;
+  font-size: 16px;
+}
+
+.AddNewSubject-Button:hover {
+  cursor: pointer;
+  color: #61dafb;
+}
+
+.AddNewSubject-Button:focus {
+  outline: none;
+}
