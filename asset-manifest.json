@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/SeminariumTechnnologie/static/css/main.6fc04a3e.chunk.css",
+    "main.js": "/SeminariumTechnnologie/static/js/main.b98211cb.chunk.js",
+    "main.js.map": "/SeminariumTechnnologie/static/js/main.b98211cb.chunk.js.map",
+    "runtime-main.js": "/SeminariumTechnnologie/static/js/runtime-main.c2975b2b.js",
+    "runtime-main.js.map": "/SeminariumTechnnologie/static/js/runtime-main.c2975b2b.js.map",
+    "static/js/2.40c8737d.chunk.js": "/SeminariumTechnnologie/static/js/2.40c8737d.chunk.js",
+    "static/js/2.40c8737d.chunk.js.map": "/SeminariumTechnnologie/static/js/2.40c8737d.chunk.js.map",
+    "index.html": "/SeminariumTechnnologie/index.html",
+    "precache-manifest.c4eae03d9b92ff1804479081a9b47508.js": "/SeminariumTechnnologie/precache-manifest.c4eae03d9b92ff1804479081a9b47508.js",
+    "service-worker.js": "/SeminariumTechnnologie/service-worker.js",
+    "static/css/main.6fc04a3e.chunk.css.map": "/SeminariumTechnnologie/static/css/main.6fc04a3e.chunk.css.map",
+    "static/js/2.40c8737d.chunk.js.LICENSE.txt": "/SeminariumTechnnologie/static/js/2.40c8737d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2975b2b.js",
+    "static/js/2.40c8737d.chunk.js",
+    "static/css/main.6fc04a3e.chunk.css",
+    "static/js/main.b98211cb.chunk.js"
+  ]
+}
