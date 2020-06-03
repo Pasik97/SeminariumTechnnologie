@@ -12,11 +12,16 @@ interface ExpandableState {
    isExpanded: boolean;
 }
 
+// Komponent Expandable pozwala na wyświetlenie przedmiotu jako kafelek, 
+// który można rozwijać i zwijać, ponieważ musimy mieć informację,
+// czy kafelek jest rozwinięty czy nie, komponent ten posiada stan.
 class Expandable extends React.Component<ExpandableProps, ExpandableState> {
    state = {
       isExpanded: false,
    }
 
+   // funckja pozwalająca na zmianę stanu komponentu, czyli na
+   // rozwinięcie i zwinięcie kafelka
    onExpandedClick = () => {
       this.setState(prevState => ({
          isExpanded: !prevState.isExpanded,
@@ -26,7 +31,7 @@ class Expandable extends React.Component<ExpandableProps, ExpandableState> {
    render() {
       const { isExpanded } = this.state;
       const { title, onSubjectDelete, subject } = this.props;
-      console.log('Expandable');
+
       return subject ? (
          <div className="Expandable-Container">
             <div
@@ -37,6 +42,8 @@ class Expandable extends React.Component<ExpandableProps, ExpandableState> {
                   <p className="Expandable-Text">{title}</p>
                   <button
                      className="Expandable-DeleteButton"
+                     // Przycisk ten wywołuje funckję otrzymana z propów pozwalającą 
+                     // na usnięcie przedmiotu ze stanu w komponencie który jest wyżej
                      onClick={() => onSubjectDelete(title)}
                   >
                      X

@@ -4,6 +4,7 @@ import { Action } from 'redux';
 import { Subject } from './Subjects';
 import './styles/AddNewSubject.css';
 import { addNewSubject } from '../../store/actions';
+import { ApplicationState } from '../../store/constants';
 
 interface AddNewSubjectProps {
    addNewSubject: (subjectName: string, subject: Subject) => void;
@@ -133,8 +134,19 @@ class AddNewSubject extends React.Component<AddNewSubjectProps, AddNewSubjectSta
    }
 }
 
+const mapStateToProps = (state: ApplicationState) => ({
+   firstName: state?.identity?.firstName,
+})
+
 const mapDispatchToProps = (dispatch: Dispatch<Action>) => ({
    addNewSubject: (subjectName: string, subject: Subject) => dispatch(addNewSubject(subjectName, subject)),
 })
 
-export default connect(null, mapDispatchToProps)(AddNewSubject);
+// W celu połączenia komponentu klasowego używamy HOC connect, który przyjmuje jako argumenty
+// funckje mapStateToProps oraz mapDispatchToProps. Funckja mapStateToProps zwraca
+// obiekt w którym znajdują się informacje, które chcemy przekazać do komponentu ze stanu aplikacji
+// (w tym wypadku imie). Funckja mapDispatchToProps zwraca obiekt, która jest przyjmuje 2 argumenty
+// a następnie dispatchuje akcję addNewSubject z tymi argumentami
+// connect zwraca funkcję, do której przekazujemu od razu komponent AddNewSubject (dlatego jest on
+// w nawiasach)
+export default connect(mapStateToProps, mapDispatchToProps)(AddNewSubject);

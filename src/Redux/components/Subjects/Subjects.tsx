@@ -13,7 +13,11 @@ export interface Subject {
 }
 
 const Subjects: React.FC = () => {
+   // Zamiast trzymać informację o przedmiotach w komponencie
+   // przechowujemy je w storze
    const state = useSelector(getState);
+   // Dzięki console.log mozemy zobaczyć jak akutalnie wyglada stan aplikacji
+   // w devtools
    console.log(state);
 
    return (

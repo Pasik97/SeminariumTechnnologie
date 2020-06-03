@@ -6,6 +6,8 @@ interface EditPageProps {
    onDataChange: (firstName: string, lastName: string) => void;
 }
 
+// Komponent klasowy został zastąpiony funkcyjnym z wykorzystaniem 
+// hooka useState
 const EditPage: React.FC<EditPageProps> = React.memo(({ firstName, onDataChange }) => {
    const [newFirstName, setNewFirstName] = useState<string>('');
    const [newLastName, setNewLastName] = useState<string>('');
@@ -19,7 +21,7 @@ const EditPage: React.FC<EditPageProps> = React.memo(({ firstName, onDataChange 
          setNewLastName(event.target.value);
       }
    }
-   console.log('EditPage');
+
    return (
       <div className="EditPage-Container">
          <p className="EditPage-Text">Zmień swoje dane {firstName}</p>

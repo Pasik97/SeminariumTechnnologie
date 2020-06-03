@@ -11,12 +11,16 @@ interface EditPageState {
    newLastName: string;
 }
 
+// Komponent EditPage jest komponentem klasowym ponieważ trzymamy aktualne 
+// warotści pól w stanie komponentu. React musi wiedzieć co zostało wpisane
+// do danego pola
 class EditPage extends React.Component<EditPageProps, EditPageState> {
    state = {
       newFirstName: '',
       newLastName: '',
    }
 
+   // funkcja pozwalająca na akutalizację stanu po wpisaniu danych w pole
    onInputChange = (event: any) => {
       this.setState({
          [event.target.name]: event.target.value,
@@ -26,7 +30,7 @@ class EditPage extends React.Component<EditPageProps, EditPageState> {
    render() {
       const { newFirstName, newLastName } = this.state;
       const { firstName, onDataChange } = this.props;
-      console.log('EditPage');
+
       return (
          <div className="EditPage-Container">
             <p className="EditPage-Text">Zmień swoje dane {firstName}</p>
@@ -50,6 +54,10 @@ class EditPage extends React.Component<EditPageProps, EditPageState> {
             </div>
             <button
                className="EditPage-Button"
+               // Przycisk Zmień Dane wywołuje funkcję, która komponent otrzymał z propów
+               // ponieważ w rzeczywistości dane przyszły z komponentu wyżej i tylko
+               // w tamtym miejscu może nastąpić akutalizacja stanu, dzięki wywołaniu onDataChange
+               // jest to możliwe
                onClick={() => onDataChange(newFirstName, newLastName)}
             >
                Zmień dane

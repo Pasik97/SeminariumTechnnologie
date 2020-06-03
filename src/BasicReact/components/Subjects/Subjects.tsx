@@ -14,11 +14,13 @@ interface SubjectsState {
    subjects: Record<string, Subject>;
 }
 
+// Subjects jest komponentem który trzyma w swoim stanie aktualnie dodane Przedmioty
 class Subjects extends React.Component<{}, SubjectsState> {
    state = {
       subjects: {}
    }
 
+   // funckja pozwalająca na dodanie nowego przedmiotu do stanu
    addNewSubject = (subjectName: string, subject: Subject) => {
       this.setState(prevState => ({
          subjects: {
@@ -28,6 +30,7 @@ class Subjects extends React.Component<{}, SubjectsState> {
       }))
    }
 
+   // funckja pozwalająca na usunięcie przedmiotu ze stanu
    onSubjectDelete = (subjectName: string) => {
       const subjectsCopy: Record<string, Subject> = { ...this.state.subjects };
       delete subjectsCopy[subjectName];
@@ -39,7 +42,7 @@ class Subjects extends React.Component<{}, SubjectsState> {
 
    render() {
       const { subjects } = this.state;
-      console.log('Subjects')
+
       return (
          <div>
             <AddNewSubject addNewSubject={this.addNewSubject} />

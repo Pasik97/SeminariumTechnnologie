@@ -10,22 +10,11 @@ interface SubjectsListProps {
 
 const SubjectsList: React.FC<SubjectsListProps> = ({ subjects, onSubjectDelete }) => (
    <div className="SubjectList-Container">
-      {console.log('SubjectsList')}
       {Object.entries(subjects).length ? <p className="SubjectList-Text">Lista przedmiotów:</p> : null}
       {Object.entries(subjects).map((item, idx) => (
          <Expandable key={idx} onSubjectDelete={onSubjectDelete} title={item[0]} subject={item[1]} />
       ))}
    </div>
 );
-
-// const SubjectsList: React.FC<SubjectsListProps> = React.memo(({ subjects, onSubjectDelete }) => (
-//    <div className="SubjectList-Container">
-//       {console.log('SubjectsList')}
-//       {Object.entries(subjects).length ? <p className="SubjectList-Text">Lista przedmiotów:</p> : null}
-//       {Object.entries(subjects).map((item, idx) => (
-//          <Expandable key={idx} onSubjectDelete={onSubjectDelete} title={item[0]} subject={item[1]} />
-//       ))}
-//    </div>
-// ));
 
 export default SubjectsList;

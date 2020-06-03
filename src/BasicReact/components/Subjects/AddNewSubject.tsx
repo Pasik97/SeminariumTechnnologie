@@ -10,6 +10,12 @@ interface AddNewSubjectState extends Subject {
    subjectName: string;
 }
 
+// Komponent EditPage jest komponentem klasowym ponieważ trzymamy aktualne 
+// warotści pól w stanie komponentu. React musi wiedzieć co zostało wpisane
+// do danego pola. Komponent pozwala na dodanie przemiotu poprzez wywołanie
+// funckji która otrzymał z góry i która wywołuje akutalizację stanu w komponencie
+// wyżej 
+// Komponent działa tak samo jak komponent EditPage.
 class AddNewSubject extends React.Component<AddNewSubjectProps, AddNewSubjectState> {
    state = {
       subjectName: '',
@@ -43,7 +49,7 @@ class AddNewSubject extends React.Component<AddNewSubjectProps, AddNewSubjectSta
          group,
          teacher,
       }
-      console.log('AddNewSubject');
+      
       return (
          <div className="AddNewSubject-Container">
             <p className="AddNewSubject-Text">Dodaj nowy przedmiot</p>

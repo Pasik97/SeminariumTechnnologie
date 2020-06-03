@@ -10,6 +10,8 @@ interface AddNewSubjectState extends Subject {
    subjectName: string;
 }
 
+// Ponieważ w tym wypadku mamy bardzo duzo pól do obsłużenia to nie ma 
+// sensu zmieniac komponentu klasowego na komponent funkcyjny 
 class AddNewSubject extends React.Component<AddNewSubjectProps, AddNewSubjectState> {
    state = {
       subjectName: '',
@@ -43,7 +45,7 @@ class AddNewSubject extends React.Component<AddNewSubjectProps, AddNewSubjectSta
          group,
          teacher,
       }
-      console.log('AddNewSubject');
+
       return (
          <div className="AddNewSubject-Container">
             <p className="AddNewSubject-Text">Dodaj nowy przedmiot</p>

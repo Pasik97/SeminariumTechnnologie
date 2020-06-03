@@ -7,9 +7,17 @@ import { changeUserIdentity } from '../../store/actions';
 const EditPage: React.FC = () => {
    const [newFirstName, setNewFirstName] = useState<string>('');
    const [newLastName, setNewLastName] = useState<string>('');
+   // useSelector jest hookiem który pozwala na pobranie danych ze storea
+   // w tym wypadku otrzymuje funckje, która jako argument przyjmuje akutalny stan
+   // i wyciąga z niego potrzebne dane czyli imie. 
    const { firstName } = useSelector(getUserIdentity);
+   // useDispatch pozwala na wysłanie akcji do storea, która zostanie obsłużona 
+   // w odpowiedni sposób przez reducer 
    const dispatch = useDispatch();
 
+   // W tym miejscu dispatchowana jest akcja changeUserIdentity, która jest 
+   // funckją przyjmującą 2 argumenty (nowe imie i nowe nazwisko), a następnie
+   // funckja ta zwraca obiekt
    const onDataChange = () => dispatch(changeUserIdentity(newFirstName, newLastName));
 
    const onInputChange = (event: any) => {
